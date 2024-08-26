@@ -17,6 +17,8 @@ Our AI intelligently breaks down your text into concise flashcards, allowing you
 ### Accessible Anywhere
 Access your flashcards from any device, at any time. Study on the go with ease.
 
+![image](https://github.com/user-attachments/assets/8637a5c6-18bb-4532-82e2-8385d688269e)
+
 ## Pricing
 
 ### Basic
@@ -39,6 +41,8 @@ Access your flashcards from any device, at any time. Study on the go with ease.
 - **Payments**: Stripe
 - **AI API**: OpenRouter's LLaMA API
 - **Deployment**: Vercel
+
+![image](https://github.com/user-attachments/assets/7c7254b2-02e3-4d99-a1ff-ccbd7ff10cff)
 
 ## Getting Started
 
@@ -89,6 +93,8 @@ Access your flashcards from any device, at any time. Study on the go with ease.
 
 3. **Deploy**:
    - Vercel will automatically deploy your project after connecting your repository. Visit your Vercel deployment URL to see the live app.
+
+![image](https://github.com/user-attachments/assets/574dd36c-d6a7-4a7e-b4f6-7f93ddf9f1b8)
 
 ## Usage
 
