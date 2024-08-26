@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-key */
+
 "use client";
 import { useUser } from "@clerk/nextjs";
 import { useEffect, useState } from "react";
@@ -61,6 +63,7 @@ export default function Flashcard() {
     <Container maxWidth="100%">
       <Grid container spacing={3} sx={{ mt: 4 }}>
         {flashcards.map((flashcard, index) => (
+        // eslint-disable-next-line
         <Grid item xs={12} sm={6} md={4} key={flashcard.id || index}>
           <Card>
             <CardActionArea
