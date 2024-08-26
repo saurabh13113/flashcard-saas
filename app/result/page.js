@@ -80,10 +80,10 @@ const ResultPage = () => {
           <Typography variant="h4">Thank you for purchasing.</Typography>
           <Box sx={{ mt: 22 }}>
             <Typography variant="h6">Session ID: {session.id}</Typography>
-            <Typograpby variant="body1">
+            <Typography variant="body1">
               We have received your payment. You will receive an email with the
               order details shortly.
-            </Typograpby>
+            </Typography>
           </Box>
         </>
       ) : (
