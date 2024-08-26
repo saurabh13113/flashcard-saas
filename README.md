@@ -1,4 +1,4 @@
-# FlashGenie
+# FlashGenie-app-🏫
 
 Welcome to FlashGenie - The easiest way to make flashcards from your text.
 
