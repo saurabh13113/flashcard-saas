@@ -110,7 +110,7 @@ export default function Flashcard() {
 
         {flashcards.length === 0 ? (
           <Typography variant="h6" align="center" color="text.secondary">
-            You haven't created any flashcards yet.
+            You haven not created any flashcards yet.
           </Typography>
         ) : (
           <Grid container spacing={4}>
