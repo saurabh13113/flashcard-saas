@@ -24,7 +24,7 @@ import {
   InputAdornment,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
-import { collection, doc, getDoc, writeBatch } from "firebase/firestore";
+import { collection, doc,addDoc, getDoc, writeBatch } from "firebase/firestore";
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { db } from "@/firebase";
@@ -95,21 +95,31 @@ export default function Generate() {
 
   const saveFlashcards = async () => {
     if (!name) return alert("Please enter a name");
+    if (!flashcards.length) return alert("No flashcards to save!");
+
     const batch = writeBatch(db);
     const userDocRef = doc(collection(db, "users"), user.id);
     const docSnap = await getDoc(userDocRef);
 
+    // Save collection metadata
     const collections = docSnap.exists() ? docSnap.data().flashcards || [] : [];
-    if (collections.find((f) => f.name === name)) return alert("Flashcard collection with that name already exists!");
-
+    if (collections.find((f) => f.name === name)) {
+      return alert("Flashcard collection with that name already exists!");
+    }
     collections.push({ name });
     batch.set(userDocRef, { flashcards: collections }, { merge: true });
-    const columnRef = collection(userDocRef, name);
-    flashcards.forEach((card) => batch.set(doc(columnRef), card));
     await batch.commit();
+
+    // Save individual cards
+    const collectionRef = collection(userDocRef, name);
+    await Promise.all(
+      flashcards.map((card) => addDoc(collectionRef, card))
+    );
+
     setOpen(false);
     setSnackbarOpen(true);
     router.push("/flashcards");
+
   };
 
   return (

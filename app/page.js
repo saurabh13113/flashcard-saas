@@ -121,6 +121,9 @@ export default function Home() {
               label="Dark Mode"
               sx={{ color: 'text.primary', textShadow: darkMode ? '0 0 5px #00bfae, 0 0 10px #00bfae' : '0 0 5px #7a00e6, 0 0 10px #7a00e6' }}
             />
+            <HoverBox sx={{ p: 1, borderRadius: 3, '&:hover': { backgroundColor: 'background.neutral' } }}>
+              <Button color="inherit" href="/flashcards">My Flashcards</Button>
+            </HoverBox>
             <SignedOut>
               <Button color="inherit" href="/sign-in">Login</Button>
               <Button color="inherit" href="/sign-up">Sign Up</Button>
