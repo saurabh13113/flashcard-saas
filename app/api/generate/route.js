@@ -16,7 +16,7 @@ You are a flashcard creator. Your task is to generate concise and effective flas
 10.Review and revise the flashcards to ensure clarity and accuracy."
 11. Make sure to only generate 10 flashcards.
 
-You must return the response in the following JSON format with nothing else whatsoever
+You must return the response in the following JSON format with nothing else whatsoever. Make sure any text on front or back is less than 25 words and in the simplest format possible.
 {
     "flashcards": [
         {
