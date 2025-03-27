@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-key */
+
 "use client";
 import Image from "next/image";
 import getStripe from "@/utils/get-stripe";
