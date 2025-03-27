@@ -208,7 +208,7 @@ export default function Home() {
         <Box textAlign="center" my={6}>
           <Typography variant="h4" gutterBottom>What Users Say</Typography>
           <Typography variant="body1" sx={{ maxWidth: 600, mx: 'auto', mt: 2 }}>
-            "This tool changed the way I study. So intuitive and simple to use!" – Jane D.
+            This tool changed the way I study. So intuitive and simple to use! – Jane D.
           </Typography>
         </Box>
 
